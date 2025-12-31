@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Technical Documentation Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="main-doc">
+      <nav id="navbar">
+        <header>CSS Explained</header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#The_Role_of_CSS">The Role of CSS</a></li>
+          <li><a class="nav-link" href="#Browser_Default_Styles">Browser Default Styles</a></li>
+          <li><a class="nav-link" href="#CSS_Rules_and_Selectors">CSS Rules and Selectors</a></li>
+          <li><a class="nav-link" href="#Common_CSS_Properties">Common CSS Properties</a></li>
+          <li><a class="nav-link" href="#Styling_Multiple_Elements">Styling Multiple Elements</a></li>
+          <li><a class="nav-link" href="#How_Browsers_Apply_CSS">How Browsers Apply CSS</a></li>
+          <li><a class="nav-link" href="#Example_in_Action">Example in Action</a></li>
+          <li><a class="nav-link" href="#The_Cascade_in_CSS">The Cascade in CSS</a></li>
+          <li><a class="nav-link" href="#Organizing_CSS">Organizing CSS</a></li>
+          <li><a class="nav-link" href="#Experimenting_With_Styles">Experimenting With Styles</a></li>
+          <li><a class="nav-link" href="#Conclusion">Conclusion</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+      </nav>
+      <article>
+        <section class="main-section" id="Introduction">
+          <header>
+            <h2>Introduction</h2>
+          </header>
+          <p>CSS, or Cascading Style Sheets, is the language that allows us to control how a web page looks. While HTML focuses on structure, CSS defines colors, spacing, fonts and layout. Together, they transform plain text into visually designed web pages. Without CSS, websites would be functional but boring.</p>
+          <p>Here are some key things you can do with CSS:</p>
+          <ol>
+            <li>Style texts and fonts</li>
+            <li>Control Elements apparence</li>
+            <li>Page layout and Positioning</li>
+            <li>Add interactivity and special effects</li>
+            <li>Responsive design</li>
+            <li>Enhance accessibility</li>
+          </ol>
+        </section>
+        <section class="main-section" id="The_Role_of_CSS">
+          <header>
+            <h2>The Role of CSS</h2>
+          </header>
+          <p>The main purpose of CSS is to separate content from presentation. This means we can write clean HTML for structure and then apply styles in a different layer. For example, an <code>h1</code> element simply declares a heading, while CSS decides if it appears bold, centered, or red.</p>
+        </section>
+        <section class="main-section" id="Browser_Default_Styles">
+          <header>
+            <h2>Browser Default Styles</h2>
+          </header>
+          <p>Every browser applies its own default styles to HTML. Headings appear large, links are blue and underlined, and paragraphs are spaced apart. These defaults make content readable even without CSS, but they limit creativity. CSS overrides these defaults so developers can choose their own design rules.</p>
+        </section>
+        <section class="main-section" id="CSS_Rules_and_Selectors">
+          <header>
+            <h2>CSS Rules and Selectors</h2>
+          </header>
+          <p>CSS is written using rules. A rule starts with a selector, followed by curly braces. Inside the braces are declarations made of properties and values. For instance, h1 { color: red; } changes all first-level headings to red. Selectors can target tags, classes, IDs, or even specific states of elements.</p>
+        </section>
+        <section class="main-section" id="Common_CSS_Properties">
+          <header>
+            <h2>Common CSS Properties</h2>
+          </header>
+          <p>Some properties are used constantly in styling: <code>color</code> defines text color, <code>font-size</code> changes text size, and <code>background</code> sets the element's background. Layout properties like <code>margin</code>, <code>padding</code>, and <code>border</code> help control spacing. Each property accepts different types of values, such as pixels, percentages, or named colors.</p>
+        </section>
+        <section class="main-section" id="Styling_Multiple_Elements">
+          <header>
+            <h2>Styling Multiple Elements</h2>
+          </header>
+          <p>A stylesheet often contains many rules. For example, you might give headings a large font, paragraphs a light background, and links a hover effect. By combining multiple rules, you create a consistent style across an entire site. This also makes your code reusable and easier to maintain.</p>
+        </section>
+        <section class="main-section" id="How_Browsers_Apply_CSS">
+          <header>
+            <h2>How Browsers Apply CSS</h2>
+          </header>
+          <p>When a page loads, the browser first builds a DOM tree from the HTML. Then, it checks CSS rules to see which elements match each selector. The matched styles are combined into a render tree, which is finally painted on the screen. This process happens quickly every time you load a page.</p>
+        </section>
+        <section class="main-section" id="Example_in_Action">
+          <header>
+            <h2>Example in Action</h2>
+          </header>
+          <p>Consider this HTML:</p>
+
+  <pre><code>&lt;h1&gt;Welcome to CSS&lt;/h1&gt;</code></pre>
+
+    <pre><code>&lt;p&gt;This is a styled paragraph.&lt;/p&gt;</code></pre>
+          <p class="less-space">With the following CSS:</p> 
+          <br> 
+          <pre><code>h1 { color: purple; text-align: center; }</code></pre>
+         <pre><code>p { background: lightgray; padding: 10px; text-align: center; }</code></pre>
+         <br> 
+         <p class="less-mtop">The heading turns purple, while the paragraph has a shaded box with padding around the text.</p>
+        </section>
+        <section class="main-section" id="The_Cascade_in_CSS">
+          <header>
+            <h2>The Cascade in CSS</h2>
+          </header>
+          <p>The “C” in CSS stands for Cascading. If two rules apply to the same element, the browser decides which one wins based on specificity and order. Inline styles usually override external stylesheets, but IDs override classes, and classes override generic element selectors. Understanding the cascade is key to avoiding conflicts.</p>
+        </section>
+        <section class="main-section" id="Organizing_CSS">
+          <header>
+            <h2>Organizing CSS</h2>
+          </header>
+          <p>Large projects often split CSS into multiple files for clarity. A reset stylesheet can remove browser defaults, followed by a base stylesheet for global rules. Then, modules or components get their own stylesheets. Organizing CSS like this keeps code clean and avoids duplication.</p>
+        </section>
+        <section class="main-section" id="Experimenting_With_Styles">
+          <header>
+            <h2>Experimenting With Styles</h2>
+          </header>
+          <p>The best way to learn CSS is by experimenting. Try adding new properties, changing values, or combining selectors. Simple changes like adjusting spacing or colors show immediate results. Developer tools in modern browsers allow you to edit CSS in real time and see the impact instantly.</p>
+        </section>
+        <section class="main-section" id="Conclusion">
+          <header>
+            <h2>Conclusion</h2>
+          </header>
+          <p>CSS is the foundation of web design. It allows developers to separate structure from style, control layouts, and create interactive experiences. From small text adjustments to complex animations, CSS shapes how users experience the web. Mastering CSS is an essential step toward becoming a confident front-end developer.</p>
+        </section>
+        <section class="main-section" id="Reference">
+          <header>
+            <h2>Reference</h2>
+          </header>
+          <p>All the documentation in this page is taken from <a class="reference-link" href="https://developer.mozilla.org/en-US/">MDN</a></p>
+        </section>
+      </article>    
+    </main>
+  </body>
+</html>
